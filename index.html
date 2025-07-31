@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap"
+      rel="stylesheet"
+    />
+    <script src="javascript/script.js" defer></script>
     <link rel="stylesheet" href="assets/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C.V et Portfolio.</title>
   </head>
   <body>
-    <header>
-      <ul class="container">
-        <li>
-          <h1>
-            <span id="prénom">Vanessa</span>
-            <span id="nom">BIAMONTI</span>
-          </h1>
-        </li>
-        <li>
-          <strong>Adresse</strong><br />
-          174 Cours de la Marne 33800 Bordeaux
-        </li>
-        <li>
-          <strong>Téléphone</strong><br />
-          06.50.92.54.87
-        </li>
-        <li>
-          <strong>Mail</strong><br />
-          <a href="mailto:vanessa.biamonti@gmail.com"
-            >vanessa.biamonti@gmail.com</a
-          >
-        </li>
-      </ul>
-    </header>
+<header>
+<div class="cv-name">
+  <img src="Vanessa_Biamonti_logo_rouge.png" alt="Logo Vanessa Biamonti" class="logo-header" />
+</div>
+  <div class="cv-infos">
+    <div class="info-block">
+      <strong>Adresse</strong>
+      <p>174 Cours de la Marne<br />33800 Bordeaux</p>
+    </div>
+    <div class="info-block">
+      <strong>Téléphone</strong>
+      <p>06.50.92.54.87</p>
+    </div>
+    <div class="info-block">
+      <strong>Mail</strong>
+      <p><a href="mailto:vanessa.biamonti@gmail.com">vanessa.biamonti@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+</header>
 
     <main class="container">
       <aside>
@@ -54,12 +57,14 @@
 
         <article>
           <h2>Centre d'interêt</h2>
-          <p class="noBorder">
+          <button id="toggleBtn" onclick="toggleInterets()">
+            <span id="toggleIcon">➕</span> Afficher les centres d'intérêt
+          </button>
+          <p id="interets" class="noBorder style="display: none;>
             Informatique<br />
-            Sport<br />
+            Sports<br />
             Musique<br />
-            Cinéma<br />
-            Littérature britannique et américaine<br />
+            Cinema<br />
           </p>
         </article>
       </aside>
@@ -106,13 +111,15 @@
             <ul class="top10">
               <li class="exp">
                 <span class="periode">2025</span>
-                <span class="desc">Etudiante en développement Web et Mobile.</span>
+                <span class="desc"
+                  >Etudiante en développement Web et Mobile.</span
+                >
               </li>
             </ul>
           </article>
         </div>
       </section>
-    </main>
+ </main>
 
     <footer>
       <ul class="container">
@@ -123,5 +130,16 @@
         </li>
       </ul>
     </footer>
+    <script>
+      const = footer = document.querySelector("footer ul.container li");
+        const year = new Date().getFulleyear();
+        footer.innerHTML + '© ${year} Vanessa Biamonti';
+    </script>
+    <script>
+      function toggleInterets() {
+        const p = document.getElementById("Interets");
+        p.style.display = p.style.display === "none" ? "block" : "none";
+      }
+    </script>
   </body>
 </html>
